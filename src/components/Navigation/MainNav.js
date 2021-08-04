@@ -41,7 +41,7 @@ export default function SimpleBottomNavigation() {
       default:
         break;
     }
-  });
+  }, [value, history]);
   return (
     <BottomNavigation
       value={value}
