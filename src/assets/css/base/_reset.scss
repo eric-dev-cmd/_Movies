@@ -1,0 +1,10 @@
+* {
+  box-sizing: inherit;
+}
+html {
+  $size: 62.5%;
+  line-height: 1.2rem;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}

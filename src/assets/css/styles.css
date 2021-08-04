@@ -1,0 +1,28 @@
+.app-red {
+  color: #ef4b46;
+}
+
+.app-blue {
+  color: dodgerblue;
+}
+
+.app-yellow {
+  color: #efb543;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+html {
+  line-height: 1.2rem;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+/*# sourceMappingURL=styles.css.map */

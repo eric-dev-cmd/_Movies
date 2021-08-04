@@ -1,0 +1,48 @@
+// mixins
+// @mixin nameMixin()
+// @include nameMixin()
+
+// @include bgc(#40005d);
+@mixin bgc($bgColor) {
+  background-color: $bgColor;
+}
+@mixin fsize($font-size) {
+  $size: $font-size;
+}
+
+// @include size(100px);
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+// @include absoluteCenter("left")
+@mixin absoluteCenter($direction: 'left') {
+  position: absolute;
+  @if $direction == 'left' {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  @if $direction == 'top' {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  @if $direction == 'both' {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+// Use: @include minWidth(1024px)
+@mixin maxWidth($value) {
+  @media screen and (max-width: $value) {
+    @content;
+  }
+}
+
+@mixin minWidth($value) {
+  @media screen and (min-width: $value) {
+    @content;
+  }
+}
