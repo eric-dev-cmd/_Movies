@@ -1,0 +1,11 @@
+.app {
+  @include bgc(#39445a);
+  min-height: 100vh;
+  color: $white;
+  padding-top: 4.5rem;
+  padding-bottom: 3rem;
+  @include maxWidth(700px) {
+    padding-top: 5.5rem;
+    padding-bottom: 2rem;
+  }
+}

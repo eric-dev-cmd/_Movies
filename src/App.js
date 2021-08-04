@@ -1,18 +1,15 @@
 import './App.css';
 import './assets/css/styles.css';
+import Header from './components/Header/Header';
+import SimpleBottomNavigation from './components/Navigation/MainNav';
 
 function App() {
   return (
-    <div className='App'>
-      <h1>Trung Vinh</h1>
-      <p className='aa'>Anh dfsdffdfd</p>
-      <p>Anh dfsdffdfd</p>
-      <p>Anh dfsdffdfd</p>
-      <p>Anh dfsdffdfd</p>
-      <p>Anh dfsdffdfd</p>
-      <p>Anh dfsdffdfd</p>
-      <p>Anh dfsdffdfd</p>
-    </div>
+    <>
+      <Header />
+      <div className='app'>Movies</div>
+      <SimpleBottomNavigation />
+    </>
   );
 }
 

@@ -9,10 +9,11 @@
 //Base Styles
 @import 'base/__base-dir';
 
-//Components
-@import 'components/__components-dir';
-
 //Layouts
 @import 'layouts/__layouts-dir';
 
+//Components
+@import 'components/__components-dir';
+
 //Pages
+@import 'pages/_pages-dir';
