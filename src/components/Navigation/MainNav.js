@@ -1,13 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
 
-import LocationOnIcon from '@material-ui/icons/LocationOn';
-import WhatshotIcon from '@material-ui/icons/Whatshot';
+import TrendingIcon from '@material-ui/icons/Whatshot';
 import MovieIcon from '@material-ui/icons/Movie';
 import SearchIcon from '@material-ui/icons/Search';
 import TvIcon from '@material-ui/icons/Tv';
+import { useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
 
 const useStyles = makeStyles({
   root: {
@@ -21,8 +22,26 @@ const useStyles = makeStyles({
 
 export default function SimpleBottomNavigation() {
   const classes = useStyles();
-  const [value, setValue] = React.useState(0);
-
+  const [value, setValue] = useState(0);
+  const history = useHistory();
+  useEffect(() => {
+    switch (value) {
+      case 0:
+        history.push('/');
+        break;
+      case 1:
+        history.push('/movies');
+        break;
+      case 2:
+        history.push('/series');
+        break;
+      case 3:
+        history.push('/search');
+        break;
+      default:
+        break;
+    }
+  });
   return (
     <BottomNavigation
       value={value}
@@ -37,7 +56,7 @@ export default function SimpleBottomNavigation() {
           color: 'white',
         }}
         label='Trending'
-        icon={<WhatshotIcon />}
+        icon={<TrendingIcon />}
       />
       <BottomNavigationAction
         style={{
